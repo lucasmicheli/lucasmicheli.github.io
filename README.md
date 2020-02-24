@@ -1,2 +1,4 @@
 # Lucas Micheli
-¡Hola! En este repositorio estaré armando próximamente un porfolio personal junto a mis proyectos.
+¡Hola! Este repositorio contiene un porfolio personal junto a mis proyectos.
+
+Cuidado, es un **work in progress**.
