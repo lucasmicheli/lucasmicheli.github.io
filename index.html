@@ -3,18 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lucas Micheli</title>
-	<meta name="author" content="Lucas Micheli" />
-    <meta name="description" content="This is my personal website." />
-    <meta name="keywords" content="web, code, biology, blog" />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Lucas Micheli</title>
+    <meta name="author" content="Lucas Micheli">
+    <meta name="description" content="Frontend developer from Argentina. This is my personal website.">
+    <meta name="keywords" content="web, developer, personal, website">
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
-<body class="">
-    <div class="wrap">
-		<h1>¡Hola! :)</h1>
-		<h2><p>Vuelvo en breve con un nuevo sitio.</p>
-		<p>Mientras tanto escribime <a href="mailto:hola@lucasmicheli.com">acá</a></p></h2>
-		<p><a href="https://github.com/lucasmicheli/">GitHub</a> - <a href="https://www.linkedin.com/in/lucasmicheli/">LinkedIn</a></p>					
-	</div>
+<body>
+    <!-- Home -->
+    <section id="home" class="home">
+        <h1> Hi! I'm <span class="home-name"> Lucas Micheli </span> </h1>
+        <p>I'm a Frontend Developer (also a Biologist)</p>
+        <div class="about-button"><a href="#about">See More</a></div>
+    </section>
+
+    <!-- Nav Bar -->
+    <nav class="sticky">
+        <ul id="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Me -->
+    <section id="about" class="about">
+        <img src="img/profile.jpg" alt="Profile picture" title="Lucas Micheli" class="profile-img">
+        <p>I'm a developer who loves the power of technology to help people achieve his goals.</p>
+        <p>I live in Mar del Plata (Argentina), a beautiful coast city full of talent, science and arts.</p>
+        <p>If you want to chat about your dreams and projects on the web, contact me!</p>
+    </section>
+
+    <!-- Some of my projects -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <a href="https://lucasmicheli.com/calculator" target="_blank" class="hvrbox">
+            <img src="img/calculator.jpg" alt="JS Calculator" class="project-pic hvr-layer-bottom">
+            <div class="hvrbox-layer-top">
+                <div class="hvrbox-text">A very simple JS Calculator</div>
+            </div>
+        </a>
+        <a href="https://lucasmicheli.com/mole" target="_blank" class="hvrbox">
+            <img src="img/mole.jpg" alt="Simple mole game" class="project-pic hvr-layer-bottom">
+            <div class="hvrbox-layer-top">
+                <div class="hvrbox-text">Feed a Mole game built with HTML, CSS & JS</div>
+            </div>
+        </a>
+        <a href="https://lucasmicheli.com/dogpicker" target="_blank" class="hvrbox">
+            <img src="img/dogs.jpg" alt="Dog's picker" class="project-pic hvr-layer-bottom">
+            <div class="hvrbox-layer-top">
+                <div class="hvrbox-text">Learn about diferent dogs!</div>
+            </div>
+        </a>
+        <a href="https://lucasmicheli.com/grupoaguas" target="_blank" class="hvrbox">
+            <img src="img/grupoaguas.jpg" alt="Grupo Aguas web page" class="project-pic hvr-layer-bottom">
+            <div class="hvrbox-layer-top">
+                <div class="hvrbox-text">The new website of Grupo Aguas (UNMdP)</div>
+            </div>
+        </a>
+        <a href="https://lucasmicheli.com/alertatoxica" target="_blank" class="hvrbox">
+            <img src="img/alertatoxica.jpg" alt="Website for Alerta Tóxica in Mar del Plata" class="project-pic hvr-layer-bottom">
+            <div class="hvrbox-layer-top">
+                <div class="hvrbox-text">The new website for Alerta Tóxica</div>
+            </div>
+        </a>
+    </section>
+
+    <!-- Contact information -->
+    <section id="contact" class="contact">
+        <h2>Want to stay in touch?</h2>
+        <p>Contact me!</p>
+        <a href="https://github.com/lucasmicheli" target="_blank" class="contact-details"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/lucasmicheli" target="_blank" class="contact-details"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/lucasmicheli" target="_blank" class="contact-details"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://medium.com/@lucasmicheli" target="_blank" class="contact-details"><i class="fa fa-medium" aria-hidden="true"></i></a>
+        <a href="mailto:hola@lucasmicheli.com" class="contact-details"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2020 - Lucas Micheli</p>
+    </footer>
 </body>
 </html>

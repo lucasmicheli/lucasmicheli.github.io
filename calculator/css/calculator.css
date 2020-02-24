@@ -7,13 +7,16 @@ html {
 body {
   padding: 0;
   margin: 0;
+  background-color: #02547D;
 }
-.calc {
+.wrapper {
+    margin: 160px auto;
     width: 400px;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
+    border: 3px solid #000000;
 }
-.calc-buttons-row {
+.calc-button-row {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -27,7 +30,7 @@ body {
 }
 .calc-button {
     background-color: #d8d9db;
-    color: black;
+    color: #000000;
     border: none;
     font-size: 40px;
     height: 100px;
@@ -43,12 +46,21 @@ body {
     flex-basis: 49.7%;
 }
 .triple {
-    flex-basis: 74.8%;
+    flex-basis: 74.8%
 }
 .calc-button:last-child {
     background-color: #df974c;
-    color: white;
+    color: #ffffff;
 }
 .calc-button:last-child:hover {
     background-color: #dfb07e;
 }
+.calc-button:last-child:active {
+    background-color: #dd8d37;
+}
+
+
+
+
+
+

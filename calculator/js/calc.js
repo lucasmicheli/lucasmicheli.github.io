@@ -4,62 +4,55 @@ let previousOperator;
 
 const screen = document.querySelector('.screen');
 
-function buttonClick(value) {
-    if (isNaN(parseInt(value))) {
-        // NaN: Not a Number
+function buttonClick(value) { 
+    if (isNaN(value)) {
+        //this is not a number
         handleSymbol(value);
     } else {
-        // It's a Number!
+        //this is a number
         handleNumber(value);
     }
-    rerender();
-}
-
-function rerender() {
     screen.innerText = buffer;
 }
-
-function handleSymbol(value) {
-    
-    switch (value) {
+function handleSymbol(symbol) {
+    switch (symbol) {
         case 'C':
             buffer = '0';
             runningTotal = 0;
             break;
         case '=':
             if (previousOperator === null) {
+                // need two numbers to do math
                 return;
             }
             flushOperation(parseInt(buffer));
             previousOperator = null;
-            buffer = +runningTotal;
+            buffer = runningTotal;
             runningTotal = 0;
             break;
-        case "←":
+        case '←':
             if (buffer.length === 1) {
-                buffer = "0";
+                buffer = '0';
             } else {
                 buffer = buffer.substring(0, buffer.length - 1);
             }
             break;
-        case "+":
-        case "-":
-        case "×":
-        case "÷":
-            handleMath(value);
+        case '+':
+        case '−':
+        case '×':
+        case '÷':
+            handleMath(symbol);
             break;
     }
 }
 
-// × &times; ÷ &divide; - &minus; + &plus; = &equals; ← &larr;
-
 function handleMath(symbol) {
-    if (buffer === "0") {
-        return; // Do nothing
+    if (buffer === '0') {
+        // do nothing
+        return;
     }
 
     const intBuffer = parseInt(buffer);
-    // or -> const intBuffer = +buffer;
 
     if (runningTotal === 0) {
         runningTotal = intBuffer;
@@ -71,11 +64,11 @@ function handleMath(symbol) {
 
     buffer = '0';
 }
-  
+
 function flushOperation(intBuffer) {
     if (previousOperator === '+') {
         runningTotal += intBuffer;
-    } else if (previousOperator === '-') {
+    } else if (previousOperator === '−') {
         runningTotal -= intBuffer;
     } else if (previousOperator === '×') {
         runningTotal *= intBuffer;
@@ -84,15 +77,15 @@ function flushOperation(intBuffer) {
     }
 }
 
-function handleNumber (number) {
+function handleNumber(numberString) {
     if (buffer === "0") {
-        buffer = number;
+        buffer = numberString;
     } else {
-        buffer += number;
+        buffer += numberString;
     }
 }
 
-function init () {
+function init () { 
     document.querySelector('.calc-buttons')
     .addEventListener('click', function(event) {
         buttonClick(event.target.innerText);
