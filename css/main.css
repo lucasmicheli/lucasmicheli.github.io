@@ -129,10 +129,10 @@ a {
     padding: 1.25em 2em;
     text-shadow: none;
     transition-property: box-shadow, transform;
-    user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
+    user-select: none;
     vertical-align: top;
     white-space: nowrap;
     will-change: box-shadow, transform;
@@ -199,7 +199,6 @@ a {
 @media screen and (min-width: 800px) {
     .content {
         align-items: center;
-        justify-content: space-around;
         justify-content: space-evenly;
         padding: 4rem;
     }

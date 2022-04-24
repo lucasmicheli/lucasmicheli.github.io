@@ -1,6 +1,6 @@
 # Personal Website
 
-Hello! 👋
+Hello! 👋🏻
 
 This repo contains a simple personal website.
 
