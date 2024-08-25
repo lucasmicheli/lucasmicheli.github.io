@@ -46,7 +46,7 @@ a {
 
 /* 3. Specific */
 .wallpaper {
-    background-image: url("../images/campo.jpg");
+    background-image: url("../images/background.jpg");
     background-position: center;
     background-size: cover;
     opacity: 0.2;
