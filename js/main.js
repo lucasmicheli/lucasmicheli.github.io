@@ -1,7 +1,7 @@
-function loadImage(id, targetId) {
-    var el = document.getElementById(id);
-    var targetEl = targetId ? document.getElementById(targetId) : el;
-    var imageToLoad;
+const loadImage = (id, targetId) => {
+    const el = document.getElementById(id);
+    const targetEl = targetId ? document.getElementById(targetId) : el;
+    let imageToLoad;
 
     if (el.dataset.image) {
         imageToLoad = el.dataset.image;
@@ -11,16 +11,17 @@ function loadImage(id, targetId) {
         imageToLoad = el.currentSrc;
     }
 
-    if (imageToLoad) {
-        var img = new Image();
-        img.src = imageToLoad;
-        img.onload = function() {
-            targetEl.classList.add('is-loaded');
-        };
+    if (!imageToLoad) {
+        return;
     }
+    const img = new Image();
+    img.src = imageToLoad;
+    img.onload = () => {
+        targetEl.classList.add('is-loaded');
+    };
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     loadImage('wallpaper');
     loadImage('pictureImage', 'picture');
 });

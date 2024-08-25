@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/animations.css">
     <link rel="icon" href="./images/favicon.png" type="image/png">
     <script defer src="./js/main.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v6.6.0/js/all.js"></script>
     <noscript>
         <style>
             .wallpaper {
@@ -26,19 +26,20 @@
     </noscript>
 </head>
 <body>
-    <div id="wallpaper" class="wallpaper" data-image="images/campo.jpg"></div>
+    <div id="wallpaper" class="wallpaper" data-image="images/background.avif"></div>
     <div class="content">
         <aside class="side">
             <figure id="picture" class="picture">
                 <div class="picture-shadow"></div>
-                <img id="pictureImage" class="picture-image"
-                src="images/lucas.jpg"
-                srcset="images/lucas@1x.jpg 1x,
-                        images/lucas@2x.jpg 2x,
-                        images/lucas@3x.jpg 3x"
-                alt="Portrait of Lucas Micheli"
-                width="320"
-                height="320">
+                <picture>
+                    <source srcset="images/profile.avif" type="image/avif">
+                    <source srcset="images/profile.webp" type="image/webp">
+                    <img id="pictureImage" class="picture-image"
+                         src="images/profile.jpg"
+                         alt="Portrait in the summer with a big smile and the sea behind. It's summer and the sun is shining."
+                         width="320"
+                         height="320">
+                </picture>
             </figure>
         </aside>
         <main class="about">
@@ -69,8 +70,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/lucasmicheli" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://x.com/LucasMicheli" target="_blank" rel="noopener noreferrer" aria-label="X Profile">
+                            <i class="fab fa-x-twitter"></i>
                         </a>
                     </li>
                 </ul>
