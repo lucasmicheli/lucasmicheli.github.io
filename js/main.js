@@ -11,16 +11,17 @@ const loadImage = (id, targetId) => {
         imageToLoad = el.currentSrc;
     }
 
-    if (imageToLoad) {
-        const img = new Image();
-        img.src = imageToLoad;
-        img.onload = function() {
-            targetEl.classList.add('is-loaded');
-        };
+    if (!imageToLoad) {
+        return;
     }
+    const img = new Image();
+    img.src = imageToLoad;
+    img.onload = () => {
+        targetEl.classList.add('is-loaded');
+    };
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     loadImage('wallpaper');
     loadImage('pictureImage', 'picture');
 });
