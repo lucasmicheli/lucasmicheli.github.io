@@ -46,7 +46,10 @@ a {
 
 /* 3. Specific */
 .wallpaper {
-    background-image: url("../images/background.avif");
+    background-image: image-set(
+        url("../images/background.avif") type("image/avif"),
+        url("../images/background.webp") type("image/webp"),
+        url("../images/background.jpg") type("image/jpeg"));
     background-position: center;
     background-size: cover;
     opacity: 0.2;
